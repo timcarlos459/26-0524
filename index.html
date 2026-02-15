@@ -53,9 +53,56 @@ text-transform:lowercase;
 
 
 
-<img src="Images/1.jfif" alt="Image1" width="300" height="500">
-<img src="Images/1.jfif" alt="Image1" width="300" height="500">
-<img src="Images/1.jfif" alt="Image1" width="300" height="500">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mercedes Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #000000;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+<h2>Mercedes Cars Gallery</h2>
+
+<div class="gallery">
+    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341" alt="Mercedes Car 1">
+    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54b" alt="Mercedes Car 2">
+    <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9" alt="Mercedes Car 3">
+</div>
+
+</body>
+</html>
+
 
 <br>
 
