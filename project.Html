@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teranova Realty</title>
+<style>
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #222;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #444;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #f0a500;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #f0a500;
+    color: #111;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #f0a500;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Property Cards */
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.property-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.property-card:hover {
+    transform: scale(1.03);
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.property-card .info {
+    padding: 15px;
+}
+
+.property-card h3 {
+    margin: 0 0 10px 0;
+    color: #f0a500;
+}
+
+.property-card p {
+    margin: 5px 0;
+}
+
+/* Gallery Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.carousel img {
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.carousel-buttons button {
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-buttons button:hover {
+    background-color: #f0a500;
+    color: #111;
+}
+
+/* Videos */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.video-grid iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Contact Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+table, th, td {
+    border: 1px solid #555;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #222;
+    color: #f0a500;
+}
+
+tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 2px solid #444;
+    color: #ccc;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>TERANOVA REALTY</h1>
+    <p>Your Trusted Real Estate Partner</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#properties">Properties</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#videos">Videos</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- Home Section -->
+<section id="home" class="container">
+    <h2>Welcome to Teranova Realty</h2>
+    <p>Teranova Realty is a modern real estate company dedicated to helping clients find premium homes and investment properties. Our team focuses on delivering high quality real estate services with transparency and professionalism.</p>
+    <p>We specialize in luxury homes, modern apartments, and investment properties located in the most desirable locations in Kenya.</p>
+</section>
+
+<!-- Properties Section -->
+<section id="properties" class="container">
+    <h2>Available Properties</h2>
+    <div class="property-grid">
+        <div class="property-card">
+            <img src="house1.jpg" alt="Ruiru Kimbo Maisonette">
+            <div class="info">
+                <h3>Ruiru Kimbo</h3>
+                <p>Maisonette | 4 Bedrooms</p>
+                <p>Price: Ksh 28M</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="house2.jpg" alt="Loresho Luxury Villa">
+            <div class="info">
+                <h3>Loresho</h3>
+                <p>Luxury Villa | 4 Bedrooms</p>
+                <p>Price: Ksh 66M</p>
+            </div>
+        </div>
+        <div class="property-card">
+            <img src="house3.jpg" alt="Kilimani Apartment">
+            <div class="info">
+                <h3>Kilimani</h3>
+                <p>Apartment | 3 Bedrooms</p>
+                <p>Price: Ksh 25M</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="container">
+    <h2>Property Gallery</h2>
+    <div class="carousel">
+        <img src="house1.jpg" class="active" alt="House 1">
+        <img src="house2.jpg" alt="House 2">
+        <img src="house3.jpg" alt="House 3">
+        <img src="house4.jpg" alt="House 4">
+        <img src="house5.jpg" alt="House 5">
+        <div class="carousel-buttons">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
+    </div>
+</section>
+
+<!-- Videos Section -->
+<section id="videos" class="container">
+    <h2>Featured Property Videos</h2>
+    <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/kFBPohtPXuo" title="Property Video 1" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/qsWV8attaG0" title="Property Video 2" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/S3pe_Z5a5ug" title="Property Video 3" allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <table>
+        <tr>
+            <th>Department</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>Sales</td>
+            <td>sales@teranova.com</td>
+            <td>+254700000000</td>
+        </tr>
+        <tr>
+            <td>Customer Support</td>
+            <td>support@teranova.com</td>
+            <td>+254711111111</td>
+        </tr>
+        <tr>
+            <td>General Inquiry</td>
+            <td>info@teranova.com</td>
+            <td>+254722222222</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Teranova Realty | Nairobi, Kenya</p>
+</footer>
+
+<script>
+// Carousel Functionality
+const carouselImages = document.querySelectorAll('.carousel img');
+let currentIndex = 0;
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+
+function showImage(index) {
+    carouselImages.forEach(img => img.classList.remove('active'));
+    carouselImages[index].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
+    showImage(currentIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % carouselImages.length;
+    showImage(currentIndex);
+});
+</script>
+
+</body>
+</html>
